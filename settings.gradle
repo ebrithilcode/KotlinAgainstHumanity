@@ -3,3 +3,4 @@ rootProject.name = 'KotlinAgainstHumanity'
 include("server")
 include("client")
 include("launcher")
+include("common")

@@ -8,9 +8,17 @@ plugins {
 group = "com.ebrithil.kah"
 version = "1.0-SNAPSHOT"
 
-repositories {
-    mavenCentral()
+allprojects {
+    repositories {
+        mavenCentral()
+    }
 }
+
+application {
+    mainClassName = ""
+}
+
+
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
@@ -30,5 +38,9 @@ project(":client") {
 }
 
 project(":launcher") {
+    apply(plugin="kotlin")
+}
+
+project(":common") {
     apply(plugin="kotlin")
 }
